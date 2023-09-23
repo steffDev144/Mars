@@ -1,0 +1,100 @@
+@media(max-width: 786px) {
+    .mobile-nav {
+        position: absolute;
+        display: block!important;
+        top: 0;
+        left: -100%;
+        width: 60%;
+        height: 100vh;
+        background-color: $main-color;
+        z-index: 200;
+        transition: all .3s ease-in-out;
+        &__close {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            font-size: 30px;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $main-text2;
+            cursor: pointer;
+
+        }
+        &__navigation {
+            display: flex;
+            align-items: flex-start;
+            padding: 100px 0 0 20px;
+            height: 100%;
+            &_list {
+                list-style-type: none;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            &_item {
+                margin-right: 0;
+                margin-top: 15px;
+                a {
+                    font-size: 20px;
+                    color: $main-text2;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    transition: all .3s ease-in-out;
+                    &:hover {
+                        color: $main-text;
+                    }
+                }
+            }
+        }
+    }
+    .mobile-nav__wrapper {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: -1000;
+        opacity: 0;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        transition: all .3s ease-in-out;
+        background-color: rgba(0,0,0,.5);
+    }
+    .hamburger {
+        display: flex!important;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-left: 25px;
+        cursor: pointer;
+        height: 16px;
+        width: 30px;
+        span {
+            background-color: $main-color;
+            height: 2px;
+            width: 90%;
+            transition: all .3s ease-in-out;
+            &:nth-child(2) {
+                width: 100%;
+            }
+        }
+        &:hover {
+            span {
+                background-color: $main-text;
+            }
+        }
+    }
+}
+
+@media(max-width: 480px) {
+    .mobile-nav {
+        width: 100%;
+    }
+    .hamburger {
+        margin: 0;
+        margin-bottom: 25px;
+    }
+}

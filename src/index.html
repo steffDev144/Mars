@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Марс</title>
+    <link rel="stylesheet" href="/css/style.min.css">
+</head>
+<body>
+    <!-- ШАПКА -->
+    <header class="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <a href="/" class="header__img">
+                    <img src="/icons/logo.svg" alt="logo_MARS">
+                </a>
+                <div class="header__block">
+                    <nav class="header__block_navigation">
+                        <ul class="header__block_navigation-list">
+                            <li class="header__block_navigation-item">
+                                <a href="#">О марсе</a>
+                            </li>
+                            <li class="header__block_navigation-item">
+                                <a href="#">Процесс</a>
+                            </li>
+                            <li class="header__block_navigation-item">
+                                <a href="#">Билеты</a>
+                            </li>
+                            <li class="header__block_navigation-item">
+                                <a href="#">Новости</a>
+                            </li>
+                            <li class="header__block_navigation-item">
+                                <a href="#">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <button class="header__block_btn">Купить билеты</button>
+                    <div class="hamburger" style="display: none;">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- НАВИГАЦИЯ ПОД МОБИЛКУ -->
+    <div class="mobile-nav__wrapper"></div>
+    <div class="mobile-nav">
+        <div class="mobile-nav__close">&#10006;</div>
+        <nav class="mobile-nav__navigation">
+            <ul class="mobile-nav__navigation_list">
+                <li class="mobile-nav__navigation_item">
+                    <a href="#">О марсе</a>
+                </li>
+                <li class="mobile-nav__navigation_item">
+                    <a href="#">Процесс</a>
+                </li>
+                <li class="mobile-nav__navigation_item">
+                    <a href="#">Билеты</a>
+                </li>
+                <li class="mobile-nav__navigation_item">
+                    <a href="#">Новости</a>
+                </li>
+                <li class="mobile-nav__navigation_item">
+                    <a href="#">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <!-- ГЛАВНАЯ СЕКЦИЯ -->
+    <section class="main">
+        <div class="main__video">
+            <!-- ВСЕ ВНУТРЕННОСТИ СЕКЦИИ -->
+            <div class="main__video_wrapper">
+                <div class="main__video_block">
+                    <div class="main__video_block-line"></div>
+                    <h2 class="main__video_block-title">Точка назначения:</h2>
+                </div>
+            </div>
+            <!-- ВИДЕО С ТЕКСТОМ -->
+            <video src="./video/Mars.m4v" autoplay muted loop></video>
+            <div class="main__video_bg">
+                <h1 class="main__video_subtitle">МАРС</h1>
+            </div>
+        </div>
+    </section>
+    <!-- ПОПАП ФОРМА -->
+    <div class="popup">
+        <div class="container">
+            <div class="popup__wrapper">
+                <h2 class="popup__title">Бронирование билетов</h2>
+                <div class="popup__close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                        <path d="M0 1.71429L1.71429 4.08718e-07L12 10.2857L10.2857 12L0 1.71429Z" fill="#D9D9D9"/>
+                        <path d="M1.71429 12L0 10.2857L10.2857 0L12 1.71429L1.71429 12Z" fill="#D9D9D9"/>
+                    </svg>
+                </div>
+                <form action="http://127.0.0.1" class="popup__form" method="POST">
+                    <div class="popup__form_items">
+                        <div class="popup__form_item">
+                            <label for="arrivalDate">Дата заезда</label>
+                            <input id="arrivalDate" placeholder="13.05.2022" type="text" onfocus="(this.type='date')">
+                        </div>
+                        <div class="popup__form_item">
+                            <label for="dateOfDeparture">Дата выезда</label>
+                            <input id="dateOfDeparture" placeholder="13.05.2032" type="text" onfocus="(this.type='date')">
+                        </div>
+                        <div class="popup__form_item">
+                            <label for="quantity">Количество</label>
+                            <input id="quantity" placeholder="1 человек" type="number" min="1">
+                        </div>
+                    </div>
+                    <input class="popup__form_btn" type="submit" id="submit" value="Купить билеты">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>

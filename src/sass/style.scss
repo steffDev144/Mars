@@ -1,0 +1,80 @@
+@import './libs/fonts';
+
+@import './vars/colors';
+
+@import './blocks/header';
+@import './blocks/main';
+@import './blocks/popup';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body,
+button,
+a {
+    font-family: 'Montseratt', sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.mobile-nav {
+    display: none;
+}
+
+.popup-active {
+    opacity: 1;
+    scale: 1;
+    z-index: 200;
+    transition: all .3s ease-in-out;
+}
+
+.mobile-nav_active {
+    left: 0!important;
+}
+
+.mobile-nav__wrapper_active {
+    z-index: 199!important;
+    opacity: 1!important;
+}
+
+@media(max-width: 1444px) {
+    .container {
+        width: 991px;
+    }
+}
+
+@media(max-width: 1200px) {
+    .container {
+        width: 786px;
+    }
+}
+
+@media(max-width: 991px) {
+    .container {
+        width: 640px;
+    }
+}
+
+@media(max-width: 786px) {
+    .container {
+        width: 480px;
+    }
+}
+
+@media(max-width: 640px) {
+    .container {
+        width: 90%;
+    }
+}
+
+@import './media/media-header';
+@import './media/media-main';
+@import './media/media-mobile-nav';
+@import './media/media-popup';

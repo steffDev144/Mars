@@ -1,0 +1,99 @@
+.main {
+    position: relative;
+    height: 100vh;
+    &__video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -100;
+        transition: all 0.3s ease-in-out; 
+        video {
+            position: absolute;
+            top: 50%;
+            left: 51%;
+            transform: translate(-50%, -50%);
+            width: 1200px;
+            height: 750px;
+            object-fit: cover;
+            z-index: -150;
+            transition: all 0.3s ease-in-out; 
+        }
+        &_wrapper {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        &_block {
+            position: relative;
+            width: 1200px;
+            height: 750px;
+            &-line {
+                position: relative;
+                z-index: 100;
+                width: 2px;
+                height: 643px;
+                background-color: #D9D9D9;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: -2px;
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 100%;
+                    background-color: #D9D9D9;
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: -4px;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 100%;
+                    background-color: #D9D9D9;
+                }
+            }
+            &-title {
+                position: absolute;
+                z-index: 100;
+                top: 10px;
+                padding-left: 36px;
+                font-size: 36px;
+                line-height: 36px;
+                font-weight: 500;
+                letter-spacing: 0.9px;
+                text-transform: uppercase;
+                color: $main-text;
+            }
+        }
+        &_bg {
+            position: absolute;
+            width: 110%;
+            height: 110%;
+            top: 0;
+            left: calc(-5% - 4px);
+            background: url('../img/bg/main_bg.jpg') center center/cover no-repeat;
+            mix-blend-mode: darken; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease-in-out; 
+        }
+        &_subtitle {
+            font-family: "Bebas Neue", sans-serif;
+            transition: all 0.3s ease-in-out; 
+            position: absolute;
+            font-size: 715.255px;
+            text-transform: uppercase;
+            color: #FFF;
+            line-height: 715.255px;
+            font-weight: 700;
+            letter-spacing: -10.729px;
+            z-index: -150;
+        }
+    }
+}
